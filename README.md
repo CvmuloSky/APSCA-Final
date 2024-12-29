@@ -1,6 +1,6 @@
 # APCSA Final Project: Maze Game
 
-This project is a Java-based maze game developed as a final project for the Advanced Placement Computer Science A (APCSA) course. It features a randomly generated maze using Wilson's Algorithm, a player-controlled navigation system, and a bot that autonomously finds its way through the maze using the A* pathfinding algorithm.
+This project is a Java-based maze game developed as a final project for APSCA. It features a randomly generated maze using Wilson's Algorithm, a player-controlled navigation system, and a bot that autonomously finds its way through the maze using the A* pathfinding algorithm.
 
 ## Features
 
