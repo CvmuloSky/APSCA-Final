@@ -49,9 +49,10 @@ This project is a Java-based maze game developed as a final project for APSCA. I
 - **Objective**: Reach the goal cell (highlighted in green) before or alongside the bot.
 - **Visualization**: To visualize the maze generation process, modify the `FPMS` variable in `Maze.java` to a value greater than 0. Similarly, bot pathfinding visualization can be toggled by enabling the appropriate settings in the game code.
 
-## Contributing
+## Contributors
 
-Contributions are welcome! Please fork this repository and submit a pull request for any enhancements or bug fixes.
+Nathan Nguyen W.T Woodson
+James Ngo W.T Woodson
 
 ## Acknowledgments
 
