@@ -51,9 +51,9 @@ This project is a Java-based maze game developed as a final project for APSCA. I
 
 ## Contributors
 
-Nathan Nguyen W.T Woodson
-James Ngo W.T Woodson
-
+- **James Ngo W.T Woodson**
+- **Nathan Nguyen W.T Woodson**
+  
 ## Acknowledgments
 
 Special thanks to the APCSA course instructors and peers for their support and guidance throughout the development of this project.
