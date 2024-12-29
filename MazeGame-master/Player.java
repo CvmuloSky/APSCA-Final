@@ -1,6 +1,6 @@
 import java.awt.*;
-import java.util.*;
 import java.awt.event.KeyEvent;
+import java.util.*;
 
 public class Player {
     private int speed;
@@ -10,11 +10,11 @@ public class Player {
     private Color color;
     private boolean hasWon;
 
-    public Player(int x, int y, Color color) {
+    public Player(int x, int y, Color color,int speed) {
         this.x = x;
         this.y = y;
         this.color = color;
-        speed = 2;
+        this.speed = speed;
         inputs = new ArrayList<>();
         hasWon = false;
     }

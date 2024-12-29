@@ -1,8 +1,8 @@
-import javax.swing.*;
-import java.util.ArrayList;
 import java.awt.*;
-import java.util.Random;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.Random;
+import javax.swing.*;
 
 public class Maze {
     private static Player player;
@@ -39,12 +39,12 @@ public class Maze {
         ArrayList<Cell> tail = new ArrayList<Cell>(); // keeps track of cells tht have been visited
         ArrayList<Integer> moveStack = new ArrayList<Integer>(); // Logs the directions of the moves and used for
                                                                  // reversing
-        Random rand = new Random(); // chooses directions
-        int x = ix / Cell.getWidth(); // Convert pixel x-coordinate to index
-        int y = iy / Cell.getHeight(); // Convert pixel y-coordinate to index
-        tail.add(cells[y][x]); // Adds the starting cell to the tail
-        cells[y][x].setColor(Color.GREEN); // Mark the initial cell as part of the path
-        moveStack.add(-1); // Initial move
+        Random rand = new Random(); //chooses directions
+        int x = ix / Cell.getWidth(); //convert pixel x-coordinate to index
+        int y = iy / Cell.getHeight(); //convert pixel y-coordinate to index
+        tail.add(cells[y][x]); //adds the starting cell to the tail
+        cells[y][x].setColor(Color.GREEN); //mark the initial cell as part of the path
+        moveStack.add(-1); //initial
         while (true) {
             // chooses cells on previous stack of cells
             ArrayList<Integer> possibleCells = new ArrayList<Integer>();
@@ -114,15 +114,15 @@ public class Maze {
                     // if there is a loop then the code will backtrack
                     int backtrack = tail.indexOf(cells[y][x]);
                     for (int j = backtrack + 1; j < tail.size(); j++) {
-                        tail.get(j).setColor(Color.BLACK); // Mark cells as unvisited
+                        tail.get(j).setColor(Color.BLACK); //mark cells as unvisited
                     }
-                    tail.subList(backtrack + 1, tail.size()).clear(); // Remove the looped cells from the tail
-                    moveStack.subList(backtrack / 2 + 1, moveStack.size()).clear(); // Clear the move stack
+                    tail.subList(backtrack + 1, tail.size()).clear(); //remove the looped cells from the tail
+                    moveStack.subList(backtrack / 2 + 1, moveStack.size()).clear(); //clear the move stack
                     frame.repaint();
                     break;
                 }
 
-                // If tail is adjacent to a white cell, mark the tail cells as white (part of
+                //If tail is adjacent to a white cell, mark the tail cells as white (part of
                 // the maze path)
                 if (i == 0 && (cells[y][x - 1].getColor().equals(Color.WHITE) ||
                         cells[y][x + 1].getColor().equals(Color.WHITE) ||
@@ -135,9 +135,9 @@ public class Maze {
                     return;
                 }
             }
-            moveStack.add(move); // Log the move
+            moveStack.add(move); //log the move
 
-            // Animating
+            //animating
             frame.repaint();
             try {
                 Thread.sleep(FPMS);
